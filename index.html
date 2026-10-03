@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>для мого Владусика ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f7efea;
+    color: #342827;
+    font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: min(1100px, 90%);
+    margin: auto;
+}
+
+/* NAV */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    padding: 18px 5%;
+
+    background: rgba(247,239,234,.85);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid #eadbd4;
+}
+
+nav a {
+    margin-right: 22px;
+    color: #705b56;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    padding-top: 100px;
+}
+
+.hero small {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #ad7d78;
+}
+
+.hero h1 {
+    font-size: clamp(65px, 10vw, 130px);
+    line-height: .78;
+    margin: 25px 0;
+}
+
+.hero p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    color: #806c66;
+}
+
+.hero-date {
+    margin-top: 30px;
+    letter-spacing: 3px;
+    color: #806c66;
+    font-size: 12px;
+}
+
+.hero-photo {
+    aspect-ratio: 4 / 5;
+    background: #e8d7d0;
+}
+
+.hero-photo img {
+    height: 100%;
+}
+
+/* SECTIONS */
+
+section {
+    padding: 120px 0;
+}
+
+.section-title {
+    font-size: 70px;
+    line-height: .8;
+    margin-bottom: 50px;
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.story p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 29px;
+    line-height: 1.35;
+}
+
+.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    border-top: 1px solid #dfcdc5;
+    border-bottom: 1px solid #dfcdc5;
+    padding: 40px 0;
+}
+
+/* GALLERY */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.gallery img {
+    aspect-ratio: 1 / 1;
+    transition: transform .5s;
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* REASONS */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.reason {
+    padding: 35px;
+    background: #fffaf7;
+    border: 1px solid #eadbd4;
+}
+
+.reason h3 {
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.reason p {
+    color: #806c66;
+    line-height: 1.6;
+}
+
+/* PROPOSAL */
+
+.proposal {
+    background: #463532;
+    color: #fff5f1;
+}
+
+.proposal .section-title {
+    color: #fff5f1;
+}
+
+.proposal p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+}
+
+/* FUTURE */
+
+.future {
+    min-height: 80vh;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.future h2 {
+    font-size: clamp(70px, 12vw, 140px);
+    line-height: .8;
+}
+
+.future p {
+    max-width: 650px;
+    margin: 30px auto;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+
+    color: #806c66;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 70px 20px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+
+    color: #806c66;
+}
+
+/* MOBILE */
+
+@media(max-width: 750px) {
+
+    nav {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 75px;
+    }
+
+    .story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reasons {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 58px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#story">наша історія</a>
+<a href="#us">ми</a>
+<a href="#misha">владусик + мішек</a>
+<a href="#love">за що я тебе люблю</a>
+<a href="#proposal">08.08.2026</a>
+<a href="#future">майбутнє</a>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero container">
+
+<div>
+
+<small>моя людина · моя любов</small>
+
+<h1>
+для мого<br>
+Владусика
+</h1>
+
+<p>
+ти став моїм домом,
+моїм спокоєм і моєю
+найулюбленішою людиною.
+</p>
+
+<div class="hero-date">
+01.07.2025 → ∞
+</div>
+
+</div>
+
+
+<div class="hero-photo">
+
+<!-- ГОЛОВНЕ ФОТО -->
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1000&q=80">
+
+</div>
+
+</section>
+
+
+
+<!-- STORY -->
+
+<section id="story">
+
+<div class="container">
+
+<h2 class="section-title">
+наша<br>
+історія
+</h2>
+
+
+<div class="story">
+
+<div>
+
+<p>
+ми знали одне одного ще задовго
+до того, як стали «ми».
+життя розводило нас у різні боки,
+але потім знову привело одне
+до одного.
+</p>
+
+<p>
+ми знову зустрілися влітку.
+і цього разу вже не хотілося
+нікуди тікати від того,
+що ми відчували.
+</p>
+
+<p>
+01.07.2025 для мене стало
+датою, з якої почалося наше
+«ми».
+</p>
+
+</div>
+
+
+<div class="quote">
+
+«я б знову обрала тебе.
+у кожній версії
+нашої історії.»
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- US -->
+
+<section id="us">
+
+<div class="container">
+
+<h2 class="section-title">
+улюблені<br>
+наші фотографії
+</h2>
+
+
+<div class="gallery">
+
+<!-- ЗАМІНИ ЦІ ПОСИЛАННЯ НА СВОЇ ФОТО -->
+
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1494774157365-9e04c6720e47?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- MISHA -->
+
+<section id="misha">
+
+<div class="container">
+
+<h2 class="section-title">
+владусик<br>
++ мішек 🐶
+</h2>
+
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- LOVE -->
+
+<section id="love">
+
+<div class="container">
+
+<h2 class="section-title">
+за що я тебе люблю
+</h2>
+
+
+<div class="reasons">
+
+<div class="reason">
+<h3>за твою доброту</h3>
+<p>
+ти вмієш турбуватися так,
+що поруч із тобою
+стає спокійно.
+</p>
+</div>
+
+
+<div class="reason">
+<h3>за твої вчинки</h3>
+<p>
+ти не тільки говориш.
+ти робиш.
+ти завжди поруч.
+</p>
+</div>
+
+
+<div class="reason">
+<h3>за твою щирість</h3>
+<p>
+за те, що з тобою
+можна бути собою.
+</p>
+</div>
+
+
+<div class="reason">
+<h3>за наше «ми»</h3>
+<p>
+мені подобається наше життя,
+навіть у найзвичайніших днях.
+</p>
+</div>
+
+
+<div class="reason">
+<h3>за мішека</h3>
+<p>
+за те, що ти полюбив
+мого маленького хвостика.
+</p>
+</div>
+
+
+<div class="reason">
+<h3>за майбутнє</h3>
+<p>
+бо коли я думаю про завтра,
+я бачу в ньому тебе.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- PROPOSAL -->
+
+<section id="proposal" class="proposal">
+
+<div class="container">
+
+<h2 class="section-title">
+08.08.2026 💍
+</h2>
+
+<p>
+ти сказав «виходь за мене»,
+і наше «колись» стало
+нашим «буде».
+</p>
+
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=80">
+
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FUTURE -->
+
+<section id="future" class="future">
+
+<div class="container">
+
+<h2>
+наше<br>
+майбутнє ♡
+</h2>
+
+<p>
+наше весілля.
+наш дім.
+ранки разом.
+подорожі.
+мішек поруч.
+і ми, які одного дня
+озирнуться назад і скажуть:
+«ми все це прожили разом».
+</p>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+я люблю тебе, Владусику. дуже. ♡
+
+<br><br>
+
+01.07.2025 → назавжди
+
+</footer>
+
+
+</body>
+</html>
